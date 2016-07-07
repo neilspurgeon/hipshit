@@ -1,0 +1,25 @@
+.admin-list-item {
+  background: #F9F9F9;
+  margin: 0 0 1rem;
+  padding: 10px;
+  display: flex;
+}
+
+.admin-list-item__image {
+  // display: inline-flex;
+  height: 100px;
+}
+
+.admin-list-item__details {
+  // width: 100px;
+  display: inline-block;
+
+  // display: inline-flex;
+      align-items: baseline;
+      // width: 100%;
+    justify-content: space-between;
+}
+
+.admin-list-item__actions {
+  
+}

@@ -1,0 +1,32 @@
+<div class="container">
+  <nav class="primary-nav">
+
+    <a class="primary-nav__logo" href="/">
+      <% logos = ['logo-1.svg', 'logo-2.svg', 'logo-3.svg', 'logo-4.svg'] %>
+      <%= image_tag "#{logos[rand(4)]}", class: "logo" %>
+    </a>
+    
+    <a href="#" id="menu-btn">
+      
+      <svg id="menu-btn__open" width="25" height="20">
+        <path d="M0,1 25,1" stroke="#000" stroke-width="2"/>
+        <path d="M0,10 25,10" stroke="#000" stroke-width="2"/>
+        <path d="M0,19 25,19" stroke="#000" stroke-width="2"/>
+      </svg> 
+
+      <svg id="menu-btn__close" class="menu-btn--close" width="25" height="20" style="display: none;">
+        <path d="M3,1 23,20" stroke="#000" stroke-width="2"/>
+        <path d="M3,20 23,1" stroke="#000" stroke-width="2"/>
+      </svg> 
+
+    </a>
+
+  </nav>
+
+  <div id="menu" class="primary-nav__menu">
+    <p>HipShit.com is a rolling list of things we think are awesome.</p>
+    <p>Whether it’s products, stories, people, movies, books, music, lamps, beer, posters, apparel, accessoires, surfboards, viral videos, plush as fuck bedding, cool pencils, cars, your moms underwear.</p>
+    <p>Anything & everything, as long as it’s Hip Shit.</p>
+  </div>
+
+</div>

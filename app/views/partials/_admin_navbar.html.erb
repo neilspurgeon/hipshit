@@ -1,0 +1,15 @@
+<nav class="admin-nav">
+  <div class="container container--admin-nav">
+    
+    <span class="admin-nav--left">
+      <%= link_to "Add Post", new_admin_post_path, class: "admin-nav__item" %>
+      <%= link_to "Manage Posts", admin_posts_path, class: "admin-nav__item" %>
+    </span>
+
+    <span class="admin-nav--right">
+      <span class="admin-nav__item admin-nav__item--greeting">Welcome, <%= current_user.first_name %></span>
+      <%= link_to 'Log Out', logout_path, class: "admin-nav__item" %>
+    </span>
+
+  </div>
+</nav>

@@ -1,0 +1,21 @@
+<% @posts.each do |p| %>
+  <div class="post">
+
+    <img class="post__image"
+      srcset="<%= p.image.url("small") %> 400w,
+              <%= p.image.url("medium") %> 700w,
+              <%= p.image.url("large") %> 1000w" />
+
+    
+    <div class="post__overlay" style="background-image: url('<%= p.image.url("medium") %>');">
+      <div class="post__details">
+        <h2 class="brand-name"><%= p.brand %></h2>
+        <hr class="separator" />
+        <h3 class="product-description"><%= p.product %></h3>
+      </div>
+    </div>
+
+  </div>
+<% end %>
+
+<%= will_paginate @posts, :previous_label => "Previous Page", :next_label => "Next Page", :page_links => false %>

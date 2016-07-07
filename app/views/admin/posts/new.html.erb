@@ -1,0 +1,22 @@
+<h1>Add Post</h1>
+
+<%= form_for @post, url: "/admin/posts", method: "POST", multipart: true do |f| %>
+  
+  <div class="form-row">
+    <%= f.text_field :brand, placeholder: "Brand" %>
+  </div>
+  
+  <div class="form-row">
+    <%= f.text_field :product, placeholder: "Product" %>
+  </div>
+
+  <div class="form-row">
+  <%= f.text_field :url, placeholder: "url" %>
+  </div>
+
+  <div class="form-row">
+    <%= f.file_field :image %>
+  </div>
+  
+  <%= f.submit "Submit" %>
+<% end %>

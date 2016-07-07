@@ -1,0 +1,19 @@
+<h1>Edit Post</h1>
+
+  <%= image_tag @post.image.url("thumb"), class: "post__img--admin" %>
+
+
+<%= form_for @post, url: "/admin/post", method: "PUT" do |f| %>
+  
+  <%= f.text_field :brand, placeholder: @post.brand %>
+  <%= f.text_field :product, placeholder: @post.product %>
+  <%= f.text_field :url, placeholder: @post.url %>
+
+  <%= f.file_field :image %>
+
+  <%= f.submit "Save" %>
+
+<% end %>
+
+
+<%= button_to "Delete", admin_post_path(@post), method: :delete %>
