@@ -18,4 +18,3 @@
 /config/application.yml
 
 .env
-secrets.yml
