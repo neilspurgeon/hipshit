@@ -42,17 +42,11 @@ Rails.application.configure do
   config.paperclip_defaults = {
     storage: :s3,
     s3_credentials: {
-      bucket: 'hipshit',
-      access_key_id: Rails.application.secrets.s3_access_key_id,
-      secret_access_key: Rails.application.secrets.s3_secret_access_key,
-      s3_region: 'Northern California',
+      bucket: ENV["S3_BUCKET"],
+      access_key_id: ENV["S3_ACCESS_KEY_ID"],
+      secret_access_key: ENV["S3_SECRET_ACCESS_KEY"],
+      s3_region: ENV["S3_REGION"],
     }
   }
-
-  # config.paperclip_defaults = {
-  #   :storage => :s3,
-  #   # :s3_host_name => "Northern California",
-  #   :bucket => 'hipshit'
-  # }
 
 end

@@ -11,7 +11,7 @@ class Admin::PostsController < AdminController
   end
 
   def create
-    post_params = params.require(:post).permit(:brand, :product, :url, :image_url, :image)
+    post_params = params.require(:post).permit(:brand, :product, :url, :image)
     @post = Post.new(post_params)
 
     puts "createing..."
