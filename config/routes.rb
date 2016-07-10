@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     get "dashboard", to: "dashboard#index"
 
     resources :posts
-    resources :users  
+    resources :users, except: :show  
 
     delete "/admin/posts/:id", to: "admin_posts#destroy", as: "delete_admin_post"
 

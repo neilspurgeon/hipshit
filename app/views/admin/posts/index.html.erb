@@ -10,6 +10,7 @@
 
     <div class="admin-list-item__actions">
       <%= button_to "Edit", edit_admin_post_path(p), method: :get %>
+      <%= button_to "Delete", admin_post_path(p.id), method: :delete %>
     </div>
   </div>
 <% end %>
