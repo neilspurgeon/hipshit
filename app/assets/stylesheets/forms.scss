@@ -3,6 +3,7 @@
 }
 
 input[type=text],
+input[type=email],
 input[type=password] {
   width: 100%;
   font-size: 1rem;
@@ -22,4 +23,10 @@ input[type=submit] {
   text-transform: uppercase;
   color: #FFF;
   letter-spacing: .04em;
+  display: block;
+  margin: 20px 0;
+}
+
+.form-container {
+  max-width: 500px;
 }
