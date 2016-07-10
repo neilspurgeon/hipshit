@@ -8,11 +8,11 @@
 
     
     <div class="post__overlay" style="background-image: url('<%= p.image.url("medium") %>');">
-      <div class="post__details">
+      <a class="post__details" target="_blank" href="<%= p.url %>">
         <h2 class="brand-name"><%= p.brand %></h2>
         <hr class="separator" />
         <h3 class="product-description"><%= p.product %></h3>
-      </div>
+      </a>
     </div>
 
   </div>
